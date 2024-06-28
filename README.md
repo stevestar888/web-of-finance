@@ -33,6 +33,12 @@ ICE[Intercontinental Exchange Inc]
 NYSE[New York Stock Exchange]
 BATS[BATS Global Markets]
 KCBT[Kansas City Board of Trade]
+JASDAQExchange[JASDAQ Securities Exchange]
+TSE[Tokyo Stock Exchange]
+OSE[Osaka Stock Exchange]
+JPX[Japan Exchange Group]
+TOCOM[Tokyo Commodity Exchange, Inc.]
+
 
 subgraph "Exchanges"
   direction LR
@@ -43,6 +49,11 @@ subgraph "Exchanges"
   NYMEX -- acquired --> ChicagoMercantileExchange
   NYSE -- acquired --> ICE
   KCBT -- acquired --> CME
+
+  JASDAQExchange -- acquired, 2010 --> OSE
+  TSE -- merger, 2013 --> JPX
+  OSE -- merger, 2013 --> JPX
+  TOCOM -- acquired, 2019 --> JPX
 end
 
 DeanWitter -- merger, 1978 --> DWR
