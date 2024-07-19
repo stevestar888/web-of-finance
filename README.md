@@ -31,6 +31,8 @@ ChicagoMercantileExchange[Chicago Mercantile Exchange]
 NYMEX[New York Mercantile Exchange]
 ICE[Intercontinental Exchange Inc]
 NYSE[New York Stock Exchange]
+NASD[Nasdaq Inc.]
+NasdaqOMX[Nasdaq OMX Group]
 BATS[BATS Global Markets]
 KCBT[Kansas City Board of Trade]
 JASDAQExchange[JASDAQ Securities Exchange]
@@ -38,12 +40,17 @@ TSE[Tokyo Stock Exchange]
 OSE[Osaka Stock Exchange]
 JPX[Japan Exchange Group]
 TOCOM[Tokyo Commodity Exchange, Inc.]
+DeutscheBoerse[Deutsche Boerse AG]
+DirectEdge[Direct Edge ECN]
+ISE[International Securities Exchange]
+NYSEEuronext[NYSE Euronext]
+BATS[BATS Global Markets]
+ChiXEurope[Chi-X Europe]
 
 
 subgraph "Exchanges"
   direction LR
   CBOT -- spin off --> CBOE
-  BATS -- acquired --> CBOE
   CBOT -- merger --> CME
   ChicagoMercantileExchange -- merger --> CME
   NYMEX -- acquired --> ChicagoMercantileExchange
@@ -54,6 +61,15 @@ subgraph "Exchanges"
   TSE -- merger, 2013 --> JPX
   OSE -- merger, 2013 --> JPX
   TOCOM -- acquired, 2019 --> JPX
+
+  ISE -- acquired, 2007 --> DeutscheBoerse
+  ISE -- sells equities market in exchange for 31.5% of Direct Edge, 2008 --> DirectEdge
+  DirectEdge -- merger, 2014 --> BATS
+  ChiXEurope -- acquired --> BATS
+  BATS -- acquired, 2017 --> CBOE
+  DeutscheBoerse -- sells ISE --> NASD
+
+  
 end
 
 DeanWitter -- merger, 1978 --> DWR
