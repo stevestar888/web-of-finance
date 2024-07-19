@@ -63,11 +63,12 @@ subgraph "Exchanges"
   TOCOM -- acquired, 2019 --> JPX
 
   ISE -- acquired, 2007 --> DeutscheBoerse
-  ISE -- sells equities market in exchange for 31.5% of Direct Edge, 2008 --> DirectEdge
+  DeutscheBoerse -- sells equities market in exchange for 31.5% of Direct Edge, 2008 --> DirectEdge
+  DeutscheBoerse -- sells ISE --> NASD
   DirectEdge -- merger, 2014 --> BATS
   ChiXEurope -- acquired --> BATS
   BATS -- acquired, 2017 --> CBOE
-  DeutscheBoerse -- sells ISE --> NASD
+
 
   
 end
